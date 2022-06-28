@@ -9,15 +9,16 @@ btnSubmit.addEventListener("click", (e) => {
   e.preventDefault();
   const curseValue = curse.value;
   const priceValue = price.value;
+  console.log(curseValue, priceValue);
 
-  fetch("/api/v1/curses", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      curseValue,
-      priceValue,
-    }),
-  });
+  // fetch("/api/v1/curses", {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify({
+  //     curseValue,
+  //     priceValue,
+  //   }),
+  // });
 });

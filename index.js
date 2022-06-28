@@ -20,27 +20,27 @@ mongoose
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 
-const productSchema = mongoose.Schema(
-  {
-    curseValue: { type: String, required: true },
-    priceValue: Number,
-  },
-  {
-    timestamps: true,
-  }
-);
+// const productSchema = mongoose.Schema(
+//   {
+//     curseValue: { type: String, required: true },
+//     priceValue: Number,
+//   },
+//   {
+//     timestamps: true,
+//   }
+// );
 
-const Product = mongoose.model("Product", productSchema);
+// const Product = mongoose.model("Product", productSchema);
 
-app.post("/api/v1/curses", (req, res) => {
-  console.log({ body: req.body });
-  const newProduct = new Product(req.body);
-  newProduct
-    .save()
-    .then(() => {
-      res.status(201).json({ ok: true });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
+// app.post("/api/v1/curses", (req, res) => {
+//   console.log({ body: req.body });
+//   const newProduct = new Product(req.body);
+//   newProduct
+//     .save()
+//     .then(() => {
+//       res.status(201).json({ ok: true });
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// });
