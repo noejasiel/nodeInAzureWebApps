@@ -6,16 +6,16 @@ const mongoose = require("mongoose");
 
 const PORT = process.env.PORT || 5000;
 
-mongoose
-  .connect(
-    `mongodb+srv://jasiel:${process.env.PASSWORD_BBDD}@development.eu72k.mongodb.net/firstDBMongo?retryWrites=true&w=majority`
-  )
-  .then((result) => {
-    app.listen(PORT, () => {
-      console.log(`escuchando en el puerto ${PORT}`);
-    });
-  })
-  .catch((error) => console.log(error));
+// mongoose
+//   .connect(
+//     `mongodb+srv://jasiel:${process.env.PASSWORD_BBDD}@development.eu72k.mongodb.net/firstDBMongo?retryWrites=true&w=majority`
+//   )
+//   .then((result) => {
+//     app.listen(PORT, () => {
+//       console.log(`escuchando en el puerto ${PORT}`);
+//     });
+//   })
+//   .catch((error) => console.log(error));
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
